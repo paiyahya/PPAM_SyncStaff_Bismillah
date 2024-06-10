@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, Image, ScrollView} from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
 import { getAuth } from "firebase/auth";
 
@@ -44,7 +44,7 @@ export default function Profil() {
                 ) : (
                     <Text>Loading user data...</Text>
                 )}                
-                <Text style={{ fontSize: 14, textAlign: 'left', color: '#FFFFFF', marginTop: 3, marginLeft: 5 }}>Security</Text>
+                <Text style={{ fontSize: 14, textAlign: 'left', color: '#FFFFFF', marginTop: 3}}>Security</Text>
                 {userEmail ? (
                     <Text style={{fontSize: 14, color: 'white' , textAlign: 'left',  marginTop: 20}}>{userEmail}</Text>
                 ) : (
@@ -62,10 +62,10 @@ export default function Profil() {
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', height: 10, marginTop: 24, marginLeft: 15, marginRight: 15}}>
-                    <View style={{ flex: 0.4, backgroundColor: '#2261BF' }} />
-                    <View style={{ flex: 0.6, backgroundColor: 'gray' }} />
+                    <View style={{ flex: 0.6, backgroundColor: '#2261BF' }} />
+                    <View style={{ flex: 0.4, backgroundColor: 'gray' }} />
                 </View>
-                <Text style={{ fontSize: 8, textAlign: 'left', marginLeft: 90, color: '#2261BF' }}>40%</Text>
+                <Text style={{ fontSize: 8, textAlign: 'left', marginLeft: 90, color: '#2261BF' }}>60%</Text>
             </View>
             <View style={{ width: 141, height: 116, backgroundColor: 'rgba(34, 97, 191, 0.1)', borderRadius: 20, padding: 10, marginTop: 35, marginLeft: 35 }}>
             <View style={{ flexDirection: 'row' }}>
@@ -76,10 +76,10 @@ export default function Profil() {
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', height: 10, marginTop: 24, marginLeft: 15, marginRight: 15}}>
-                    <View style={{ flex: 0.35, backgroundColor: '#2261BF' }} />
-                    <View style={{ flex: 0.65, backgroundColor: 'gray' }} />
+                    <View style={{ flex: 0.55, backgroundColor: '#2261BF' }} />
+                    <View style={{ flex: 0.45, backgroundColor: 'gray' }} />
                 </View>
-                <Text style={{ fontSize: 8, textAlign: 'left', marginLeft: 90, color: '#2261BF' }}>35%</Text>
+                <Text style={{ fontSize: 8, textAlign: 'left', marginLeft: 90, color: '#2261BF' }}>55%</Text>
             </View>
             <View style={{ width: 141, height: 116, backgroundColor: 'rgba(34, 97, 191, 0.1)', borderRadius: 20, padding: 10, marginTop: 35, marginLeft: 35}}>
                 <View style={{ flexDirection: 'row' }}>
@@ -90,10 +90,10 @@ export default function Profil() {
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', height: 10, marginTop: 24, marginLeft: 15, marginRight: 15}}>
-                    <View style={{ flex: 0.3, backgroundColor: '#2261BF' }} />
-                    <View style={{ flex: 0.7, backgroundColor: 'gray' }} />
+                    <View style={{ flex: 0.5, backgroundColor: '#2261BF' }} />
+                    <View style={{ flex: 0.5, backgroundColor: 'gray' }} />
                 </View>
-                <Text style={{ fontSize: 8, textAlign: 'left', marginLeft: 90, color: '#2261BF' }}>30%</Text>
+                <Text style={{ fontSize: 8, textAlign: 'left', marginLeft: 90, color: '#2261BF' }}>50%</Text>
             </View>
             <View style={{ width: 141, height: 116, backgroundColor: 'rgba(34, 97, 191, 0.1)', borderRadius: 20, padding: 10, marginTop: 35, marginLeft: 35, marginBottom: 40 }}>
                 <View style={{ flexDirection: 'row'}}>

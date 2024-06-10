@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, View, Image, ScrollView, TouchableOpacity, Linking, Alert } from 'react-native';
 import { Link, router } from 'expo-router';
 import { signOut, getAuth } from 'firebase/auth';
 import { auth } from './config/firebase';
-import { Alert } from 'react-native';
-
 
 export default function Setting() {
     // logged in user email
@@ -67,18 +65,20 @@ export default function Setting() {
                 <Image source={require('./foto/panah.png')}></Image>
             </View>
         </View>
-        <View style={{ width: 335, height: 87, borderWidth: 1, borderColor: '#485460', borderRadius: 20, padding: 10, marginTop: 15, marginLeft: 25, marginBottom: 100 }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                <View>
-                    <View style={{ flexDirection: 'row', marginLeft: 10, marginTop: 5}}>
-                        <Image source={require('./foto/report.png')} style={{width: 20, height: 20}} />
-                        <Text style={{ fontSize: 14, color: '#2261BF', textAlign: 'left', fontWeight: 'bold', marginTop: 3, marginLeft: 5}}>Bantuan</Text>
+        <TouchableOpacity onPress={() => Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdtu7_sPmWPBONac5rNYl9aOKGn4s2e5B5jdgMbEZN5ISf1gA/viewform?usp=sharing')}>
+            <View style={{ width: 335, height: 87, borderWidth: 1, borderColor: '#485460', borderRadius: 20, padding: 10, marginTop: 15, marginLeft: 25, marginBottom: 100 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <View>
+                        <View style={{ flexDirection: 'row', marginLeft: 10, marginTop: 5}}>
+                            <Image source={require('./foto/report.png')} style={{width: 20, height: 20}} />
+                            <Text style={{ fontSize: 14, color: '#2261BF', textAlign: 'left', fontWeight: 'bold', marginTop: 3, marginLeft: 5}}>Bantuan</Text>
+                        </View>
+                        <Text style={{ fontSize: 14, textAlign: 'left', marginTop: 5, marginLeft: 10 }}>Isi form bantuan untuk menyampaikan kritik atau saran Anda</Text>
                     </View>
-                    <Text style={{ fontSize: 14, textAlign: 'left', marginTop: 5, marginLeft: 10 }}>Isi form bantuan untuk menyampaikan kritik atau saran Anda</Text>
+                    <Image source={require('./foto/panah.png')}></Image>
                 </View>
-                <Image source={require('./foto/panah.png')}></Image>
             </View>
-        </View>
+        </TouchableOpacity>
         <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 200}}>
             <TouchableOpacity
                 onPress={() => {
